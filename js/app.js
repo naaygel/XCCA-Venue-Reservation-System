@@ -155,13 +155,7 @@ function login() {
 }
 
 function logout() {
-  currentUser = null;
-  saveCurrentUser();
-  updateNavigation();
-  loadReservations();
-  clearReservationForm();
-  alert("You have logged out.");
-  showTab("loginTab");
+  window.location.href = "/.auth/logout";
 }
 
 function addReservation() {
