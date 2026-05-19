@@ -18,30 +18,29 @@
     <button id="homeNav" class="hidden" onclick="showTab('homeTab')">Home</button>
     <button id="reservationsNav" class="hidden" onclick="showTab('reservationsTab')">Reservations</button>
     <button id="adminNav" class="hidden" onclick="showTab('adminTab')">Admin</button>
-    <button id="logoutNav" class="hidden logout-btn" onclick="logout()">Logout</button>
+    <button id="logoutNav" class="hidden" onclick="logout()">Logout</button>
   </nav>
 </header>
 
 <div class="container">
 
   <!-- LOGIN PAGE -->
-  <div id="loginTab" class="tab active">
-    <div class="card auth-card">
-      <h2>Login</h2>
-      <p class="muted">Login first to create, edit, and view reservations.</p>
+<div id="loginTab" class="tab active">
+  <div class="card auth-card">
+    <h2>Login</h2>
 
-      <input type="text" id="loginUsername" placeholder="Username">
-      <input type="password" id="loginPassword" placeholder="Password">
+    <p class="muted">
+      Login using your Microsoft account.
+    </p>
 
-      <button onclick="login()">Login</button>
-
-      <p class="switch-text">
-        No account yet?
-        <button class="link-btn" onclick="showTab('signupTab')">Create one</button>
-      </p>
-    </div>
+    <a href="/.auth/login/aad">
+      <button>
+        Login with Microsoft
+      </button>
+    </a>
   </div>
 
+</div>
   <!-- SIGNUP PAGE -->
   <div id="signupTab" class="tab">
     <div class="card auth-card">
