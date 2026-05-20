@@ -1,0 +1,17 @@
+{
+  "name": "xcca-reservation-api",
+  "version": "1.0.0",
+  "description": "Azure Functions API for XCCA Venue Reservation System",
+  "main": "index.js",
+  "scripts": {
+    "start": "func start"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "mssql": "^11.0.1"
+  },
+  "devDependencies": {
+    "azure-functions-core-tools": "^4.0.0"
+  }
+}

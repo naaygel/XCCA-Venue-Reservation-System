@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "SQL_SERVER": "your-server.database.windows.net",
+    "SQL_DATABASE": "ReservationDB",
+    "SQL_USER": "your-sql-admin",
+    "SQL_PASSWORD": "your-sql-password",
+    "JWT_SECRET": "replace-this-with-a-long-random-secret"
+  }
+}
