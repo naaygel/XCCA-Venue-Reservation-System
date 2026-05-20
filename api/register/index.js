@@ -54,9 +54,16 @@ module.exports = async function (context, req) {
     };
   } catch (error) {
     context.log(error);
+  
     context.res = {
       status: 500,
-      body: { message: "Server error during registration." }
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: "Server error during registration.",
+        error: error.message
+      })
     };
   }
 };
