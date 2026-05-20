@@ -1,3 +1,4 @@
+const API_URL = "xcca-be-d3fscnfzebe9cua8.southeastasia-01.azurewebsites.net/api"
 let reservations = [];
 let currentUser = JSON.parse(sessionStorage.getItem("currentUser")) || null;
 let authToken = sessionStorage.getItem("authToken") || null;
