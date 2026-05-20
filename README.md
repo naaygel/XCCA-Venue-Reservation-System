@@ -1,5 +1,7 @@
 # XCCA Venue Reservation System - Azure SQL + Custom Auth Version
 
+test
+
 This version keeps the frontend pages and design, but replaces localStorage users/reservations with:
 
 - Azure Functions API
