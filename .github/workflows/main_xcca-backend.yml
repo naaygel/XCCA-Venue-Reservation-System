@@ -63,6 +63,13 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_78F75A8A35B44E28B0A50E2FC51C9002 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5D382F451DE9490DA0E7AD1644139E08 }}
 
+      - name: Disable Run From Package
+        uses: azure/appservice-settings@v1
+        with:
+          app-name: 'XCCA-BACKEND'
+          slot-name: 'Production'
+          app-settings-json: '[{"name": "WEBSITE_RUN_FROM_PACKAGE", "value": "0"}]'
+
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         id: fa
@@ -70,3 +77,10 @@ jobs:
           app-name: 'XCCA-BACKEND'
           slot-name: 'Production'
           package: '.'
+
+      - name: Re-enable Run From Package
+        uses: azure/appservice-settings@v1
+        with:
+          app-name: 'XCCA-BACKEND'
+          slot-name: 'Production'
+          app-settings-json: '[{"name": "WEBSITE_RUN_FROM_PACKAGE", "value": "1"}]'
